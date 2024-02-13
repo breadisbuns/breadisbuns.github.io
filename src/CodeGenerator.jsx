@@ -11,33 +11,44 @@
 //new property button - takes you back to code generator (input fields)
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CopyBlock, atomOneDark } from 'react-code-blocks';
+import { useNavigate, useState } from 'react-router-dom';
+import { CopyBlock, a11yLight } from 'react-code-blocks';
 
 const CodeGenerator = () => {
   const navigate = useNavigate();
 
-  const generatedSchema = {};
+  const schema = {};
+  let schemaName = '';
+  let schemaString = `const ${schemaName} = new Schema('${schemaName}', 
+  ${JSON.stringify(schema)}
+  );`;
 
   const updateSchema = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     // if checkbox unchecked, does not appear in entries
     const formJson = Object.fromEntries(formData.entries());
+    // TODO: throw error if no property entered
 
-    console.log(formJson);
+    schemaName = formJson.schemaName;
+    schema[formJson.propertyName] = { ...formJson };
+    console.log('formJson', formJson);
+    console.log('schema', schema);
+    schemaString = `const ${schemaName} = new Schema('${schemaName}', 
+  ${JSON.stringify(schema)}
+  );`;
     return;
   };
 
-  const exampleSchema = `const mySchema = new Schema('mySchema', {
-    model: { type: 'string' },
-    modelNo: { type: 'number' },
-    dateBought: { type: 'date' },
-    ownerName: { type: 'text' },
-    ownerLocation: { type: 'point' },
-    parts: { type: 'string[]' },
-    secret: { type: 'number[]' },
-  });`;
+  // const exampleSchema = `const mySchema = new Schema('mySchema', {
+  //   model: { type: 'string' },
+  //   modelNo: { type: 'number' },
+  //   dateBought: { type: 'date' },
+  //   ownerName: { type: 'text' },
+  //   ownerLocation: { type: 'point' },
+  //   parts: { type: 'string[]' },
+  //   secret: { type: 'number[]' },
+  // });`;
 
   return (
     <>
@@ -56,7 +67,7 @@ const CodeGenerator = () => {
         <div>
           <label>
             type:{' '}
-            <select name='dataType'>
+            <select name='type'>
               <option value='string'>string</option>
               <option value='number'>number</option>
             </select>
@@ -64,22 +75,22 @@ const CodeGenerator = () => {
         </div>
         <div>
           <label>
-            Required: <input type='checkbox' name='requiredCheckbox' />
+            Required: <input type='checkbox' name='isRequired' />
           </label>
         </div>
         <div>
           <label>
-            Unique: <input type='checkbox' name='uniqueCheckbox' />
+            Unique: <input type='checkbox' name='isUnique' />
           </label>
         </div>
         <button type='submit'>save</button>
       </form>
 
       <CopyBlock
-        text={exampleSchema}
+        text={schemaString}
         language='javascript'
         showLineNumbers={true}
-        theme={atomOneDark}
+        theme={a11yLight}
       />
       <button onClick={() => navigate(-1)}>Home Page</button>
     </>
