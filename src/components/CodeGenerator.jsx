@@ -10,8 +10,7 @@
 //Research Code Mirror Embedding...Display Snippets
 //new property button - takes you back to code generator (input fields)
 
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CopyBlock, a11yLight } from 'react-code-blocks';
 
@@ -19,8 +18,21 @@ const CodeGenerator = () => {
   const navigate = useNavigate();
   const [schemaString, setSchemaString] = useState(``);
   const [schema, setSchema] = useState({});
+  const [schemaName, setSchemaName] = useState('');
 
-  let schemaName = '';
+  useEffect(() => {
+    // to bypass page loading blank schema string
+    if (Object.keys(schema).length > 0) {
+      // Generate schema string whenever schema state changes
+      setSchemaString(
+        `const ${schemaName} = new Schema('${schemaName}', ${JSON.stringify(
+          schema,
+          null,
+          2
+        ).replace(/"([^"]+)":/g, '$1:')});` // regex to remove quotes on properties
+      );
+    }
+  }, [schema, schemaName]);
 
   const updateSchema = (e) => {
     e.preventDefault(); // so we don't refresh
@@ -28,9 +40,11 @@ const CodeGenerator = () => {
     const formData = new FormData(e.target);
     // if checkbox unchecked, does not appear in entries
     const formJson = Object.fromEntries(formData.entries());
-    // TODO: throw error if no property entered
 
-    schemaName = formJson.schemaName;
+    // TODO: warn user if no property entered
+    if (!formJson.propertyName) return;
+
+    setSchemaName(formJson.schemaName);
 
     const newSchema = { ...schema };
 
@@ -47,14 +61,6 @@ const CodeGenerator = () => {
 
     setSchema(newSchema);
 
-    // regex to remove quotes on properties
-    setSchemaString(
-      `const ${schemaName} = new Schema('${schemaName}', ${JSON.stringify(
-        schema,
-        null,
-        2
-      ).replace(/"([^"]+)":/g, '$1:')});`
-    );
     return;
   };
 
