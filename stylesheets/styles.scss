@@ -1,0 +1,48 @@
+@import 'variables';
+
+.home-container{
+  background-color: $bkrd-primary-color;
+}
+
+.main-content {
+	padding: 10%;
+}
+
+.ContactInfo-container {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 4em;
+  h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.75rem;
+    color: grey;
+  }
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .contact-card {
+    padding: 1.25rem 1.5rem 1rem 1.5rem;
+    background: $bkrd-primary-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    &:hover, &:focus {
+      animation: shake .8s cubic-bezier(.36,.07,.19,.97) both;
+      backface-visibility: hidden;
+      transform-origin: center;
+    }
+    div {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: center;
+    }
+  }
+}
