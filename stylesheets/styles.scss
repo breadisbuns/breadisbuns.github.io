@@ -45,7 +45,7 @@
 
 //main features styling
 .main-features {
-  background-color: aquamarine;
+  background-color: #e9cc7e;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -86,7 +86,7 @@
   top: 0;
   left: 0;
   border-radius: 5px;
-  height: 100px;
+  height: 75px;
   z-index: 2;
 
   .NavBar {
@@ -94,55 +94,88 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    font-size: 20px;
+    font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: $bkrd-primary-color;
-    width: 100%;
-    height: 100px;
+    background-color: $secondary-color;
+    width: 99%;
+    height: 75px;
     top: 0px;
     left: 0;
-    padding: 0 30px;
-  }
+    padding: 0 15px;
 
-  a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    padding: 5px 10px;
-    margin: 0 5px;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease 0s;
-  }
-
-  .schema-btn {
-    padding: 4px;
-    background-color: bisque;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  }
-
-  .socials {
-    display: flex;
-    margin-left: 10px;
 
     a {
-      padding: 5 px 0 5px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      color: $primary-color;
+      padding: 5px 10px;
+      margin: 0 10px;
+      &:hover {
+      color: $primary-color-lt;
+      }
     }
 
-    .Nav-Github {
+    .nav-links {
       display: flex;
-      height: 2.6rem;
-      width: 2.6rem;
+      align-items: center;
+      transition: all 0.3s ease 0s;
+      &:hover {
+      color: $primary-color-lt;
+      }
     }
 
-    .Nav-Npm {
+    .nonsocials {
       display: flex;
-      height: 2.4rem;
-      width: 2.4rem;
+      margin-left: 10px;
+    }
+
+    .schema-btn {
+      padding: 3px;
+      background-color: $secondary-color-xlt;
+      border: 1px solid $secondary-color-lt;
+      border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px  3px 7px -3px;
+    }
+
+    .socials {
+      display: flex;
+      margin-left: 10px;
+
+      a {
+       padding: 5px 0 5px;
+      }
+
+      .Nav-Github {
+       display: flex;
+        height: 2.6rem;
+        width: 2.6rem;
+        &:hover {
+          height: 3rem;
+          width: 3rem;
+          transition: 0.3s;
+        }
+        &:active {
+          height: 2rem;
+          width: 2rem;
+          transition: 0.3s;
+        }
+      }
+
+      .Nav-Npm {
+        display: flex;
+        height: 2.4rem;
+        width: 2.4rem;
+        &:hover {
+          height: 3rem;
+          width: 3rem;
+          transition: 0.3s;
+        }
+        &:active {
+          height: 2rem;
+          width: 2rem;
+          transition: 0.3s;
+        }
+      }
     }
   }
 
@@ -158,13 +191,13 @@
 
 //contact info styling
 .ContactInfo-container {
-  background-color: aquamarine;
+  background-color: $secondary-color;
   text-align: center;
   padding: 4em;
   h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.75rem;
-    color: grey;
+    color: $tertiary-color-lt;
   }
   .contact-info {
     display: flex;
@@ -195,37 +228,51 @@
       justify-content: center;
     }
   }
-}
-
-.headshot {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 8px;
-}
-
-.contact-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.contact-title {
-  font-size: 0.95rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  word-wrap: false;
-}
-
-.contact-link-container {
-  height: 2.5rem;
-  width: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.contact-link {
-  color: blueviolet;
-  height: 2rem;
-  width: 2rem;
+  @keyframes shake {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(3deg); }
+    40% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    100% { transform: rotate(0); }
+  }
+  .headshot {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 99px;
+  }
+  .contact-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .contact-title {
+   font-size: 0.95rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    word-wrap: false;
+  }
+  .contact-link-container {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .contact-link {
+    color: $primary-color;
+    height: 2rem;
+    width: 2rem;
+    &:hover {
+      color: $primary-color-lt;
+      height: 4rem;
+      width: 4rem;
+      transition: 0.3s;
+    }
+    &:active {
+      height: 2rem;
+      width: 2rem;
+      transition: 0.3s;
+    }
+  }
 }

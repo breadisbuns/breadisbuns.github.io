@@ -13,21 +13,19 @@ const NavBar = () => {
 					{/* add logo here */}
 					<h3>anpan</h3>
 				</div>
+
 				<ul className="nav-links">
-					<li>
+					<li className="nonsocials">
 						<Link to="/" className="home">
 							Home
 						</Link>
 					</li>
-					<li>
+					<li className="nonsocials">
 						<button className="schema-btn">
 							<Link to="/CodeGenerator" className="generate_schema">
 								Generate Schema
 							</Link>
 						</button>
-						{/* schema button here: 
-            <button onClick={() => navigate("/CodeGenerator")}> Generate Schema
-			      </button>*/}
 					</li>
 					<li className="socials">
 						<a href="https://github.com/oslabs-beta/anpan">
@@ -40,6 +38,7 @@ const NavBar = () => {
 						</a>
 					</li>
 				</ul>
+
 			</nav>
 		</nav>
 	);
