@@ -162,7 +162,7 @@
   text-align: center;
   padding: 4em;
   h2 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.75rem;
     color: grey;
   }
@@ -183,8 +183,9 @@
     align-items: center;
     gap: 0.5rem;
     text-align: center;
-    &:hover, &:focus {
-      animation: shake .8s cubic-bezier(.36,.07,.19,.97) both;
+    &:hover,
+    &:focus {
+      animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       backface-visibility: hidden;
       transform-origin: center;
     }
