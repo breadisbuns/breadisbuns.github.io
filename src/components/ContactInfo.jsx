@@ -1,19 +1,14 @@
 import React from "react";
 import ContactCard from "./ContactCard.jsx";
-//import headshots from assets
+import kellsy from '../../assets/Kellsy NL.png';
+import may from '../../assets/May W.png';
+import kevin from '../../assets/Kev Photo.png';
+import dillon from '../../assets/Dillon H.png';
 
 //Contact container housing all contact card information
-// class IndvlContact {
-// 	constructor(photo, linkedin, github, name) {
-// 		this.photo = photo;
-// 		this.linkedin = linkedin;
-// 		this.github = github;
-// 		this.name = name;
-// 	}
-// }
-
 class IndvlContact {
-	constructor(linkedin, github, name) {
+	constructor(photo, linkedin, github, name) {
+		this.photo = photo;
 		this.linkedin = linkedin;
 		this.github = github;
 		this.name = name;
@@ -22,28 +17,29 @@ class IndvlContact {
 
 //create teamMembers var to hold all persons info
 const Kellsy = new IndvlContact(
+	kellsy,
 	"https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
 	"https://github.com/kelsIam",
 	"Kellsy Nava-Lopez"
 );
-// const Kellsy = new IndvlContact(
-//    kellsy (photo),
-// 		"https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
-// 		"https://github.com/kelsIam",
-// 		"Kellsy Nava-Lopez"
-// );
-// const Kellsy = new IndvlContact(
-// 		kellsy (photo)
-//   "https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
-// 		"https://github.com/kelsIam",
-// 		"Kellsy Nava-Lopez"
-// );
-// const Kellsy = new IndvlContact(
-//  kellsy (photo)
-// 	"https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
-// 	"https://github.com/kelsIam", 'Kellsy Nava-Lopez'
-// );
-const teamMembers = [Kellsy];
+const May = new IndvlContact(
+   may,
+		"https://www.linkedin.com/in/may-wilcher/",
+		"https://github.com/rehcliw",
+		"May Wilcher"
+);
+const Kevin = new IndvlContact(
+		kevin,
+  "https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
+		"https://github.com/murph212",
+		"Kevin Murphy"
+);
+const Dillon = new IndvlContact(
+ dillon,
+	"https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
+	"https://github.com/HailsD", 'Dillon Hale'
+);
+const teamMembers = [Kellsy, May, Kevin, Dillon];
 
 function ContactInfo() {
 	//loop through persons to render before

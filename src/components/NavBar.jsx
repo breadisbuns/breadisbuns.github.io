@@ -13,7 +13,7 @@ const NavBar = () => {
 					{/* add logo here */}
 					<h3>anpan</h3>
 				</div>
-				<ul>
+				<ul className="nav-links">
 					<li>
 						<Link to="/" className="home">
 							Home
@@ -34,7 +34,7 @@ const NavBar = () => {
 							<AiOutlineGithub className="Nav-Github" />
 						</a>
 					</li>
-					<li>
+					<li className="socials">
 						<a href="https://www.npmjs.com/package/@breadisbuns/anpan">
 							<SiNpm className="Nav-Npm" />
 						</a>
