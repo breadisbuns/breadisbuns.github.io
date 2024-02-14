@@ -57,56 +57,60 @@ const CodeGenerator = () => {
 
   console.log(schemaString);
 
-  return (
-    <>
-      <h1>Generate Schema Here</h1>
-      <form onSubmit={updateSchema}>
-        <div>
-          <label>
-            Schema Name: <input name='schemaName' />
-          </label>
-        </div>
-        <div>
-          <label>
-            Property Name: <input name='propertyName' />
-          </label>
-        </div>
-        <div>
-          <label>
-            type:{' '}
-            <select name='type'>
-              <option value='string'>string</option>
-              <option value='number'>number</option>
-              <option value='string[]'>string[]</option>
-              <option value='number[]'>number[]</option>
-              <option value='boolean'>boolean</option>
-              <option value='date'>date</option>
-              <option value='point'>point</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>
-            Required: <input type='checkbox' name='isRequired' />
-          </label>
-        </div>
-        <div>
-          <label>
-            Unique: <input type='checkbox' name='isUnique' />
-          </label>
-        </div>
-        <button type='submit'>save</button>
-      </form>
-      {schemaString && (
-        <CopyBlock
-          text={schemaString}
-          language='javascript'
-          showLineNumbers={true}
-          theme={a11yLight}
-        />
-      )}
-      <button onClick={() => navigate(-1)}>Home Page</button>
-    </>
-  );
+	return (
+		<div className="codePage">
+			<section className="form-container">
+				<section className="propertyGenerator">Generate Schema</section>
+				<section className="formBox">
+					<form onSubmit={updateSchema}>
+						<div className="labels">
+							<label>
+								Schema Name: <input name="schemaName" />
+							</label>
+						</div>
+						<div className="labels">
+							<label>
+								Property Name: <input name="propertyName" />
+							</label>
+						</div>
+						<div className="options">
+							<label>
+								type:{" "}
+								<select name="type">
+									<option value="string">string</option>
+									<option value="number">number</option>
+									<option value="string[]">string[]</option>
+									<option value="number[]">number[]</option>
+									<option value="boolean">boolean</option>
+									<option value="date">date</option>
+									<option value="point">point</option>
+								</select>
+							</label>
+						</div>
+						<div className="required">
+							<label>
+								Required: <input type="checkbox" name="isRequired" />
+							</label>
+						</div>
+						<div className="unique">
+							<label>
+								Unique: <input type="checkbox" name="isUnique" />
+							</label>
+						</div>
+						<button type="submit">save</button>
+					</form>
+
+					{schemaString && (
+						<CopyBlock
+							text={schemaString}
+							language="javascript"
+							showLineNumbers={true}
+							theme={a11yLight}
+						/>
+					)}
+				</section>
+			</section>
+		</div>
+	);
 };
 export default CodeGenerator;

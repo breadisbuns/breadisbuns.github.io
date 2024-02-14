@@ -23,14 +23,17 @@ const App = () => {
 		<div>
 			<BrowserRouter>
 				<Routes>
-					{/* <Route
-                        exact
-                        path="/"
-                        element={<h1>Is this thing on?</h1>}
-                    /> */}
 					<Route exact path="/" element={<Layout />} />
 					<Route index element={<HomePage />} />
-					<Route exact path="/CodeGenerator" element={<CodeGenerator />} />
+					<Route
+						exact
+						path="/CodeGenerator"
+						element={
+							<div>
+								<Layout /> <CodeGenerator />
+							</div>
+						}
+					/>
 					<Route exact path="*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>

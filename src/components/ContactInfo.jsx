@@ -35,9 +35,10 @@ const Kevin = new IndvlContact(
 		"Kevin Murphy"
 );
 const Dillon = new IndvlContact(
- dillon,
-	"https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
-	"https://github.com/HailsD", 'Dillon Hale'
+	dillon,
+	"https://www.linkedin.com/in/dillon-hale-8b8968161/",
+	"https://github.com/HailsD",
+	"Dillon Hale"
 );
 const teamMembers = [Kellsy, May, Kevin, Dillon];
 

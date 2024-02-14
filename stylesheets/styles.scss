@@ -1,278 +1,347 @@
-@import 'variables';
+@import "variables";
 
 .main-content {
 	padding: 10%;
 }
 
-.home-container{
-  background-color: $bkrd-primary-color;
+.home-container {
+	background-color: $bkrd-primary-color;
 }
 
 .homepage-container {
-  display: flex;
-  padding: 5% 10%;
+	display: flex;
+	padding: 5% 10%;
 
-  .main-description {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    flex: 1 0 50%;
+	.main-description {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: left;
+		flex: 1 0 50%;
 
-    h1 {
-      margin-top: 10px 0;
-      font-size: 3.5rem;
-      line-height: 1.5;
-      font-weight: bold;
-    }
+		h1 {
+			margin-top: 10px 0;
+			font-size: 3.5rem;
+			line-height: 1.5;
+			font-weight: bold;
+		}
 
-    p {
-      line-height: 1.5;
-      font-size: 1.5rem;
-    }
-  }
+		p {
+			line-height: 1.5;
+			font-size: 1.5rem;
+		}
+	}
 }
 
 @media screen and (max-width: 750px) {
-  .homepage-container {
-    flex-direction: column;
-  }
-  .main-description {
-    text-align: center;
-  }
+	.homepage-container {
+		flex-direction: column;
+	}
+	.main-description {
+		text-align: center;
+	}
 }
 
 //main features styling
 .main-features {
-  background-color: #e9cc7e;
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  gap: 2rem;
+	background-color: #e9cc7e;
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+	gap: 2rem;
 }
 
 @media screen and (max-width: 750px) {
-  .main-features {
-      flex-direction: column;
-  }
+	.main-features {
+		flex-direction: column;
+	}
 }
 
 .get-started {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 
-  .get-started-title {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.75rem;
-  }
+	.get-started-title {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 2.75rem;
+	}
 }
 
 @media screen and (max-width: 750px) {
-  .get-started-content {
-    flex-direction: column;
-  }
+	.get-started-content {
+		flex-direction: column;
+	}
 }
 
 //navbar styling
 .NavBar-Container {
-  background-color: $bkrd-primary-color;
-  box-shadow: 0px 0px 14px 0px rgba(0,0,0,75);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-  height: 75px;
-  z-index: 2;
+	background-color: $bkrd-primary-color;
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 75);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	height: 75px;
+	z-index: 2;
 
-  .NavBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    font-size: 25px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: $secondary-color;
-    width: 99%;
-    height: 75px;
-    top: 0px;
-    left: 0;
-    padding: 0 15px;
+	.NavBar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		font-size: 25px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: $secondary-color;
+		width: 99%;
+		height: 75px;
+		top: 0px;
+		left: 0;
+		padding: 0 15px;
 
+		a {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 20px;
+			color: $primary-color;
+			padding: 5px 10px;
+			margin: 0 10px;
+			&:hover {
+				color: $primary-color-lt;
+			}
+		}
 
-    a {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 20px;
-      color: $primary-color;
-      padding: 5px 10px;
-      margin: 0 10px;
-      &:hover {
-      color: $primary-color-lt;
-      }
-    }
+		.nav-links {
+			display: flex;
+			align-items: center;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $primary-color-lt;
+			}
+		}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease 0s;
-      &:hover {
-      color: $primary-color-lt;
-      }
-    }
+		.nonsocials {
+			display: flex;
+			margin-left: 10px;
+		}
 
-    .nonsocials {
-      display: flex;
-      margin-left: 10px;
-    }
+		.schema-btn {
+			padding: 3px;
+			background-color: $secondary-color-xlt;
+			border: 1px solid $secondary-color-lt;
+			border-radius: 5px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+				rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		}
 
-    .schema-btn {
-      padding: 3px;
-      background-color: $secondary-color-xlt;
-      border: 1px solid $secondary-color-lt;
-      border-radius: 5px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px  3px 7px -3px;
-    }
+		.socials {
+			display: flex;
+			margin-left: 10px;
 
-    .socials {
-      display: flex;
-      margin-left: 10px;
+			a {
+				padding: 5px 0 5px;
+			}
 
-      a {
-       padding: 5px 0 5px;
-      }
+			.Nav-Github {
+				display: flex;
+				height: 2.6rem;
+				width: 2.6rem;
+				&:hover {
+					height: 3rem;
+					width: 3rem;
+					transition: 0.3s;
+				}
+				&:active {
+					height: 2rem;
+					width: 2rem;
+					transition: 0.3s;
+				}
+			}
 
-      .Nav-Github {
-       display: flex;
-        height: 2.6rem;
-        width: 2.6rem;
-        &:hover {
-          height: 3rem;
-          width: 3rem;
-          transition: 0.3s;
-        }
-        &:active {
-          height: 2rem;
-          width: 2rem;
-          transition: 0.3s;
-        }
-      }
+			.Nav-Npm {
+				display: flex;
+				height: 2.4rem;
+				width: 2.4rem;
+				&:hover {
+					height: 3rem;
+					width: 3rem;
+					transition: 0.3s;
+				}
+				&:active {
+					height: 2rem;
+					width: 2rem;
+					transition: 0.3s;
+				}
+			}
+		}
+	}
 
-      .Nav-Npm {
-        display: flex;
-        height: 2.4rem;
-        width: 2.4rem;
-        &:hover {
-          height: 3rem;
-          width: 3rem;
-          transition: 0.3s;
-        }
-        &:active {
-          height: 2rem;
-          width: 2rem;
-          transition: 0.3s;
-        }
-      }
-    }
-  }
-
-  .Nav-title {
-    display: flex;
-    align-items: center;
-    a {
-      margin: 0;
-      padding: 2px 0 2px 2px;
-    }
-  }
+	.Nav-title {
+		display: flex;
+		align-items: center;
+		a {
+			margin: 0;
+			padding: 2px 0 2px 2px;
+		}
+	}
 }
 
 //contact info styling
 .ContactInfo-container {
-  background-color: $secondary-color;
-  text-align: center;
-  padding: 4em;
-  h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.75rem;
-    color: $tertiary-color-lt;
-  }
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 2rem;
-  }
-  .contact-card {
-    padding: 1.25rem 1.5rem 1rem 1.5rem;
-    background: $bkrd-primary-color;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-    &:hover,
-    &:focus {
-      animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      backface-visibility: hidden;
-      transform-origin: center;
-    }
-    div {
-      display: flex;
-      gap: 0.25rem;
-      justify-content: center;
-    }
-  }
-  @keyframes shake {
-    0% { transform: rotate(0); }
-    20% { transform: rotate(3deg); }
-    40% { transform: rotate(-3deg); }
-    60% { transform: rotate(2deg); }
-    80% { transform: rotate(-2deg); }
-    100% { transform: rotate(0); }
-  }
-  .headshot {
-    height: 8rem;
-    width: 8rem;
-    border-radius: 99px;
-  }
-  .contact-name {
-    font-size: 1.1rem;
-    font-weight: 800;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .contact-title {
-   font-size: 0.95rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    word-wrap: false;
-  }
-  .contact-link-container {
-    height: 2.5rem;
-    width: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  .contact-link {
-    color: $primary-color;
-    height: 2rem;
-    width: 2rem;
-    &:hover {
-      color: $primary-color-lt;
-      height: 4rem;
-      width: 4rem;
-      transition: 0.3s;
-    }
-    &:active {
-      height: 2rem;
-      width: 2rem;
-      transition: 0.3s;
-    }
-  }
+	background-color: $secondary-color;
+	text-align: center;
+	padding: 4em;
+	h2 {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 2.75rem;
+		color: $tertiary-color-lt;
+	}
+	.contact-info {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		padding: 2rem;
+	}
+	.contact-card {
+		padding: 1.25rem 1.5rem 1rem 1.5rem;
+		background: $bkrd-primary-color;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 auto;
+		align-items: center;
+		gap: 0.5rem;
+		text-align: center;
+		&:hover,
+		&:focus {
+			animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+			backface-visibility: hidden;
+			transform-origin: center;
+		}
+		div {
+			display: flex;
+			gap: 0.25rem;
+			justify-content: center;
+		}
+	}
+	@keyframes shake {
+		0% {
+			transform: rotate(0);
+		}
+		20% {
+			transform: rotate(3deg);
+		}
+		40% {
+			transform: rotate(-3deg);
+		}
+		60% {
+			transform: rotate(2deg);
+		}
+		80% {
+			transform: rotate(-2deg);
+		}
+		100% {
+			transform: rotate(0);
+		}
+	}
+	.headshot {
+		height: 8rem;
+		width: 8rem;
+		border-radius: 99px;
+	}
+	.contact-name {
+		font-size: 1.1rem;
+		font-weight: 800;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+	.contact-title {
+		font-size: 0.95rem;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		word-wrap: false;
+	}
+	.contact-link-container {
+		height: 2.5rem;
+		width: 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25rem;
+	}
+	.contact-link {
+		color: $primary-color;
+		height: 2rem;
+		width: 2rem;
+		&:hover {
+			color: $primary-color-lt;
+			height: 4rem;
+			width: 4rem;
+			transition: 0.3s;
+		}
+		&:active {
+			height: 2rem;
+			width: 2rem;
+			transition: 0.3s;
+		}
+	}
 }
+
+.codePage {
+	background-color: $tertiary-color-lt;
+	display: flex;
+	justify-content: center;
+	// align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 14rem;
+	width: 50rem;
+	height: 25rem;
+	border-radius: 1.6rem;
+	background-color: $bkrd-primary-color;
+	// box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 75);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+	// position: fixed;
+	// width: 100%;
+	// top: 0;
+	// left: 0;
+	// border-radius: 5px;
+	// height: 100%;
+	// z-index: 2;
+	// .SchemaName {
+	//   color: aqua;
+	// }
+	// .propertyName {
+	//   display: flex;
+	// }
+}
+
+.formBox {
+	display: flex;
+	padding: 6rem 10rem;
+	border: 4px solid $tertiary-color-lt;
+	border-radius: 1.6rem;
+}
+
+// .propertyGenerator {
+//   display: flex;
+//   justify-content: center;
+// }
+
+//media query if screen gets small here:
+// @media screen and (max-width: 750px) {
+//   .form-container {
+//     flex-direction: column;
+//   }
+// }
