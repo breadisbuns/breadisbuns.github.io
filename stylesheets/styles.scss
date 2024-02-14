@@ -1,7 +1,7 @@
 @import "variables";
 
 .main-content {
-	padding: 10%;
+  padding: 10%;
 }
 
 .home-container {
@@ -179,14 +179,22 @@
 		}
 	}
 
-	.Nav-title {
-		display: flex;
-		align-items: center;
-		a {
-			margin: 0;
-			padding: 2px 0 2px 2px;
-		}
-	}
+  .Nav-title {
+    display: flex;
+    align-items: center;
+    a {
+      margin: 0;
+      padding: 2px 0 2px 2px;
+      //logo styling
+    }
+    .Anpan-Logo {
+      display: flex;
+      width: 6rem;
+      height: 6rem;
+      padding: 2px 2px 7px 2px;
+      filter: drop-shadow(1px 5px 5px $tertiary-color-drk);
+    }
+  }
 }
 
 //contact info styling
