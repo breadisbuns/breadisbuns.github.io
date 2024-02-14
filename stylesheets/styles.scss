@@ -1,10 +1,10 @@
 @import 'variables';
 
 .main-content {
-	padding: 10%;
+  padding: 10%;
 }
 
-.home-container{
+.home-container {
   background-color: $bkrd-primary-color;
 }
 
@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 750px) {
   .main-features {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -66,7 +66,7 @@
   gap: 2rem;
 
   .get-started-title {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.75rem;
   }
 }
@@ -80,7 +80,7 @@
 //navbar styling
 .NavBar-Container {
   background-color: $bkrd-primary-color;
-  box-shadow: 0px 0px 14px 0px rgba(0,0,0,75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 75);
   position: fixed;
   width: 100%;
   top: 0;
@@ -103,7 +103,6 @@
     left: 0;
     padding: 0 15px;
 
-
     a {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 20px;
@@ -111,7 +110,7 @@
       padding: 5px 10px;
       margin: 0 10px;
       &:hover {
-      color: $primary-color-lt;
+        color: $primary-color-lt;
       }
     }
 
@@ -120,7 +119,7 @@
       align-items: center;
       transition: all 0.3s ease 0s;
       &:hover {
-      color: $primary-color-lt;
+        color: $primary-color-lt;
       }
     }
 
@@ -134,7 +133,8 @@
       background-color: $secondary-color-xlt;
       border: 1px solid $secondary-color-lt;
       border-radius: 5px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px  3px 7px -3px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     .socials {
@@ -142,11 +142,11 @@
       margin-left: 10px;
 
       a {
-       padding: 5px 0 5px;
+        padding: 5px 0 5px;
       }
 
       .Nav-Github {
-       display: flex;
+        display: flex;
         height: 2.6rem;
         width: 2.6rem;
         &:hover {
@@ -185,6 +185,14 @@
     a {
       margin: 0;
       padding: 2px 0 2px 2px;
+      //logo styling
+    }
+    .Anpan-Logo {
+      display: flex;
+      width: 6rem;
+      height: 6rem;
+      padding: 2px 2px 7px 2px;
+      filter: drop-shadow(1px 5px 5px $tertiary-color-drk);
     }
   }
 }
@@ -229,12 +237,24 @@
     }
   }
   @keyframes shake {
-    0% { transform: rotate(0); }
-    20% { transform: rotate(3deg); }
-    40% { transform: rotate(-3deg); }
-    60% { transform: rotate(2deg); }
-    80% { transform: rotate(-2deg); }
-    100% { transform: rotate(0); }
+    0% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(3deg);
+    }
+    40% {
+      transform: rotate(-3deg);
+    }
+    60% {
+      transform: rotate(2deg);
+    }
+    80% {
+      transform: rotate(-2deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
   }
   .headshot {
     height: 8rem;
@@ -247,7 +267,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .contact-title {
-   font-size: 0.95rem;
+    font-size: 0.95rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     word-wrap: false;
   }
