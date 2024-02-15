@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { CopyBlock, a11yLight } from 'react-code-blocks';
 
 const CodeGenerator = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [schemaString, setSchemaString] = useState(``);
   const [schema, setSchema] = useState({});
   const [schemaName, setSchemaName] = useState('');
@@ -55,12 +55,14 @@ const CodeGenerator = () => {
     return;
   };
 
-  console.log(schemaString);
+  // console.log(schemaString);
 
 	return (
 		<div className="codePage">
 			<section className="form-container">
-				<section className="propertyGenerator">Generate Schema</section>
+				<section className="propertyGenerator">
+					Generate Schema
+				</section>
 				<section className="formBox">
 					<form onSubmit={updateSchema}>
 						<div className="labels">
@@ -97,11 +99,12 @@ const CodeGenerator = () => {
 								Unique: <input type="checkbox" name="isUnique" />
 							</label>
 						</div>
-						<button type="submit">save</button>
+						<button className='saveBtn' type="submit">save</button>
 					</form>
 
 					{schemaString && (
 						<CopyBlock
+							className='copyBlock'
 							text={schemaString}
 							language="javascript"
 							showLineNumbers={true}
