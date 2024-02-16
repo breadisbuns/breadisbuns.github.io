@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import { CopyBlock, a11yLight } from 'react-code-blocks';
 
 const CodeGenerator = () => {
-  const navigate = useNavigate();
   const [schemaString, setSchemaString] = useState(``);
   const [schema, setSchema] = useState({});
   const [schemaName, setSchemaName] = useState('');

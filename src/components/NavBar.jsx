@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { SiNpm } from 'react-icons/si';
 import anpanLogo from '../../assets/anpan-logo.png';
-//import logo from assets
 
 // Navbar container with linked routes
 const NavBar = () => {
