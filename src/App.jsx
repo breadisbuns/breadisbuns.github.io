@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import "../stylesheets/styles.scss";
 import NavBar from "./components/NavBar.jsx";
 import HomePage from "./components/HomePage.jsx";
@@ -20,22 +20,13 @@ const NotFound = () => <h1> 404 Page Not Found</h1>;
 const App = () => {
 	return (
 		<div>
-			<BrowserRouter>
 				<Routes>
-					<Route exact path="/" element={<Layout />} />
-					<Route index element={<HomePage />} />
-					<Route
-						exact
-						path="/CodeGenerator"
-						element={
-							<div>
-								<Layout /> <CodeGenerator />
-							</div>
-						}
-					/>
-					<Route exact path="*" element={<NotFound />} />
+					<Route path="/" element={<Layout />} >
+						<Route index element={<HomePage />} />
+						<Route path="CodeGenerator" element={<CodeGenerator />} />
+						<Route path="*" element={<NotFound />} />
+					</Route >
 				</Routes>
-			</BrowserRouter>
 		</div>
 	);
 };
