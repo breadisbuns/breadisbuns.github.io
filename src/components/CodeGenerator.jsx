@@ -56,18 +56,19 @@ const CodeGenerator = () => {
 					<form onSubmit={updateSchema}>
 						<div className="labels">
 							<label>
-								Schema Name: <input name="schemaName" />
+								Schema Name: <input name="schemaName" className="input-field" />
 							</label>
 						</div>
 						<div className="labels">
 							<label>
-								Property Name: <input name="propertyName" />
+								Property Name:{" "}
+								<input name="propertyName" className="input-field" />
 							</label>
 						</div>
 						<div className="options">
 							<label>
-								type:{" "}
-								<select name="type">
+								Type:{" "}
+								<select name="type" className="dropdown">
 									<option value="string">string</option>
 									<option value="number">number</option>
 									<option value="string[]">string[]</option>
@@ -80,12 +81,22 @@ const CodeGenerator = () => {
 						</div>
 						<div className="required">
 							<label>
-								Required: <input type="checkbox" name="isRequired" />
+								Required:{" "}
+								<input
+									type="checkbox"
+									name="isRequired"
+									className="input-field"
+								/>
 							</label>
 						</div>
 						<div className="unique">
 							<label>
-								Unique: <input type="checkbox" name="isUnique" />
+								Unique:{" "}
+								<input
+									type="checkbox"
+									name="isUnique"
+									className="input-field"
+								/>
 							</label>
 						</div>
 						<button className="saveBtn" type="submit">
