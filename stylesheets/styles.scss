@@ -185,8 +185,8 @@
 		a {
 			margin: 0;
 			padding: 2px 0 2px 2px;
-			//logo styling
 		}
+		//logo styling
 		.Anpan-Logo {
 			display: flex;
 			width: 6rem;
@@ -301,7 +301,6 @@
 	background-color: $tertiary-color-lt;
 	display: flex;
 	justify-content: center;
-	// align-items: center;
 	width: 100%;
 	height: 100%;
 	margin: 0px;
@@ -348,13 +347,7 @@ html {
 		background-color: $secondary-color-lt;
 		border: 1px solid $tertiary-color-lt;
 		border-radius: 5px;
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+			rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	}
 }
-
-//media query if screen gets small here:
-// @media screen and (max-width: 750px) {
-//   .form-container {
-//     flex-direction: column;
-//   }
-// }
