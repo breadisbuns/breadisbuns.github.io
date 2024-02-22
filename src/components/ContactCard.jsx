@@ -18,6 +18,6 @@ function ContactCard({ photo, linkedin, github, name }) {
 			</div>
 		</li>
 	);
-};
+}
 
 export default ContactCard;

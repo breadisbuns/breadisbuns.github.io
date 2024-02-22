@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import NavBar from './NavBar.jsx';
 import ContactInfo from "./ContactInfo.jsx";
 
 const HomePage = () => {
-	// const navigate = useNavigate();
 	return (
 		<section className="home-container">
 			<section className="homepage-container main-content">
