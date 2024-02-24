@@ -38,6 +38,28 @@ const HomePage = () => {
       </section>
       <section className="main-features main-content">
         <h2 className="main-features-title">Main Features</h2>
+        <section className="main-features-content">
+          <section className="main-features-content-container">
+            <h3 className="main-features-content-title">Simplification</h3>
+            <p className="main-features-content-description">
+              Streamline your Bun application effortlessly with anpan's mapping
+              of Redis data structures.
+            </p>
+          </section>
+          <section className="main-features-content-container">
+            <h3 className="main-features-content-title">Validation</h3>
+            <p className="main-features-content-description">
+              Ensure data integrity and accuracy with anpan's schema validation.
+            </p>
+          </section>
+          <section className="main-features-content-container">
+            <h3 className="main-features-content-title">Query</h3>
+            <p className="main-features-content-description">
+              Efficiently retrieve and manipulate data using anpan's querying
+              methods.
+            </p>
+          </section>
+        </section>
       </section>
       <section>
         <ContactInfo />
