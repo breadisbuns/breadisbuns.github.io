@@ -4,8 +4,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack serve --open",
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest"
   },
   "dependencies": {
     "@babel/runtime": "^7.23.9",
@@ -106,6 +105,17 @@
           "jsx": "always"
         }
       ]
+    }
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "verbose": true,
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^.+\\.(jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm)$": "<rootDir>/__mock__/fileMock.js",
+      "^.+\\.(scss)$": "<rootDir>/__mock__/styleMock.js"
     }
   }
 }
