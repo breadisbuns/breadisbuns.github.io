@@ -30,7 +30,7 @@ const May = new IndvlContact(
 );
 const Kevin = new IndvlContact(
   kevin,
-  "https://www.linkedin.com/in/kellsy-nava-l%C3%B3pez/",
+  "https://www.linkedin.com/in/kevin-murphy-5173701b/",
   "https://github.com/murph212",
   "Kevin Murphy"
 );
