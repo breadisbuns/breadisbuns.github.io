@@ -1,17 +1,17 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src',
+  entry: "./src",
   output: {
-    publicPath: '/',
-    path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    publicPath: "/",
+    path: path.join(__dirname, "/dist"),
+    filename: "bundle.js",
   },
 
   plugins: [
     new HTMLWebpackPlugin({
-      template: './index.html',
+      template: "./index.html",
     }),
   ],
   mode: process.env.NODE_ENV,
@@ -21,44 +21,44 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
         test: /.(css|scss)$/,
         exclude: [/node_modules/, /client\/stylesheets\/modules/],
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /.(css|scss)$/,
         include: [/client\/stylesheets\/modules/],
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                localIdentName: "[name]__[local]___[hash:base64:5]",
               },
             },
           },
-          'sass-loader',
+          "sass-loader",
         ],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader',
+        loader: "svg-inline-loader",
       },
     ],
   },
