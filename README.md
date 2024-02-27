@@ -54,6 +54,15 @@ Run the command:
 npm run test
 ```
 
+### deploying changes
+
+The site is served from the `gh-pages` branch. To bundle changes and update this branch, run the following:
+
+```bash
+npm run build
+npm run deploy
+```
+
 ### Features and Methods:
 
 | Feature                                            | Status |
