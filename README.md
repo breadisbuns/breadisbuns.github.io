@@ -1,6 +1,8 @@
 <h1 align="center">anpan-website</h1>
 
-![anpan logo](https://raw.githubusercontent.com/oslabs-beta/anpan/dev/assets/anpan-logo.png "anpan logo")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oslabs-beta/anpan/dev/assets/anpan-logo.png" />
+</p>
 
 <h1 align="center">anpan</h1>
 <div align="center">
@@ -27,36 +29,54 @@ Checkout our library:
 </div>
 
 ## Open Source Information
+
 If you would like to contribute to our product, let us know! Below are features and methods we would have liked to implement in our webpage. If you would like to propose a new feature or method, send us a message.
 
 ### Contribution Guidelines
+
 To contribute, fork and clone our repository. Once set up, any changes will need to be approved via Pull Requests. We ask that you include as much information and documentation for any changes made when you create a PR.
 
 ### Running the webpage in dev mode
+
 Once cloned, run the command:
+
 ```bash
 npm run dev
 ```
+
 Head over to localhost:8080 to view the webpage.
 
 #### Running webpage tests
+
 Run the command:
+
 ```bash
 npm run test
 ```
 
+### deploying changes
+
+The site is served from the `gh-pages` branch. To bundle changes and update this branch, run the following:
+
+```bash
+npm run build
+npm run deploy
+```
+
 ### Features and Methods:
-| Feature                                                                               | Status    |
-|---------------------------------------------------------------------------------------|-----------|
-| Private user sign-on with account types/privileges     | 🙏🏻        |
-| Delete functionality of Code Generator    | 🙏🏻        |
-| Intuitive explorer of existing data    | 🙏🏻        |
+
+| Feature                                            | Status |
+| -------------------------------------------------- | ------ |
+| Private user sign-on with account types/privileges | 🙏🏻     |
+| Delete functionality of Code Generator             | 🙏🏻     |
+| Intuitive explorer of existing data                | 🙏🏻     |
 
 - ✅ = Ready to use
 - ⏳ = In progress
 - 🙏🏻 = Looking for contributors
 
 ## <a name='authors'></a> Authors
+
 - ### May Wilcher
   <a href="https://github.com/rehcliw"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>
   <a href="https://www.linkedin.com/in/may-wilcher/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
@@ -71,6 +91,7 @@ npm run test
   <a href="https://www.linkedin.com/in/kevin-murphy-5173701b/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 
 ## <a name='license'></a> License
+
 This product is licensed under the MIT License - see the LICENSE file for details.
 
 This is an open-source product.
